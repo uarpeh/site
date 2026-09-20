@@ -311,6 +311,17 @@ const players = {
     ],
     "Прокуратура": [],
     "Інше": [
-        
+        {
+            "username": "Andrew_01174",
+            "role": "Технічний Адміністратор",
+            "telegram": "8377880216",
+            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-F3E80E05FD28B906F106F78AE3F59C4B-Png/420/420/AvatarHeadshot/Png/noFilter"
+        },
+        {
+            "username": "Itz_raose",
+            "role": "R3 Старший Адміністратор",
+            "telegram": "1431122546",
+            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
+        },
     ]
 };
