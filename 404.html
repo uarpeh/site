@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <title>404 — UKRAINE RP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .particles {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .particles span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #e87c39;
+            border-radius: 50%;
+            opacity: 0;
+            animation: float-up 6s infinite;
+        }
+        .particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particles span:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particles span:nth-child(3) { left: 35%; animation-delay: 2s; }
+        .particles span:nth-child(4) { left: 50%; animation-delay: 0.5s; }
+        .particles span:nth-child(5) { left: 65%; animation-delay: 1.5s; }
+        .particles span:nth-child(6) { left: 75%; animation-delay: 3s; }
+        .particles span:nth-child(7) { left: 85%; animation-delay: 2.5s; }
+        .particles span:nth-child(8) { left: 90%; animation-delay: 4s; }
+
+        @keyframes float-up {
+            0% { bottom: -10%; opacity: 0; transform: scale(0.5); }
+            20% { opacity: 0.8; }
+            100% { bottom: 110%; opacity: 0; transform: scale(1.2); }
+        }
+
+
+        .glow-orb {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(232,124,57,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse-orb 4s ease-in-out infinite;
+            z-index: 0;
+        }
+        @keyframes pulse-orb {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+        }
+
+        .logo {
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            filter: drop-shadow(0 0 12px rgba(232,124,57,0.4));
+            z-index: 10;
+            animation: logo-fade 1s ease-out;
+        }
+        @keyframes logo-fade {
+            from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .code-block {
+            flex: 1 1 280px;
+            font-size: 10rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1;
+            background: linear-gradient(135deg, #e87c39, #ff9f5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: code-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+            text-shadow: none;
+            position: relative;
+        }
+        @keyframes code-enter {
+            from { opacity: 0; transform: translateY(40px) scale(0.8); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .text-block {
+            flex: 1 1 380px;
+            padding: 30px;
+            animation: text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+        }
+        @keyframes text-enter {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .text-block h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: #f5f5f5;
+            font-weight: 700;
+        }
+        .text-block p {
+            font-size: 1.1rem;
+            color: #999;
+            line-height: 1.7;
+            max-width: 440px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #e87c39, #d4642a);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(232,124,57,0.3);
+        }
+        .btn-home:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(232,124,57,0.5);
+        }
+        .btn-home:active {
+            transform: translateY(0) scale(0.98);
+        }
+        .gear {
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 200px;
+            height: 200px;
+            fill: #e87c39;
+            opacity: 0.06;
+            animation: spin 20s linear infinite;
+            z-index: 0;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .code-block { font-size: 7rem; }
+            .text-block h1 { font-size: 1.6rem; }
+            .text-block p { font-size: 0.95rem; }
+            .logo { width: 120px; top: 30px; }
+            .glow-orb { width: 250px; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="glow-orb"></div>
+
+    <img src="/img/logoserver.png" class="logo" alt="UKRAINE RP Logo">
+
+    <svg class="gear" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .11-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.018 7.018 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.42l-.38 2.65a7.018 7.018 0 0 0-1.7.98l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .11.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98L2.57 14.63a.5.5 0 0 0-.11.64l2 3.46c.14.24.43.33.68.22l2.49-1c.52.38 1.09.7 1.7.98l.38 2.65c.04.26.26.42.5.42h4c.24 0 .46-.16.5-.42l.38-2.65c.61-.28 1.18-.6 1.7-.98l2.49 1c.25.11.54.02.68-.22l2-3.46a.5.5 0 0 0-.11-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/>
+    </svg>
+
+    <div class="container">
+        <div class="code-block">404</div>
+        <div class="text-block">
+            <h1>Сторінка не знайдена</h1>
+            <p>Такої сторінки не існує або її було переміщено.<br>Перевірте URL-адресу та спробуйте ще раз.</p>
+            <a href="/" class="btn-home">← На головну</a>
+        </div>
+    </div>
+</body>
+</html>

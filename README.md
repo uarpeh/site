@@ -1,1 +1,1 @@
-# site
+# serverrules

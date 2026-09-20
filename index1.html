@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <title>Сайт тимчасово недоступний — UKRAINE RP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .dots {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .dots span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #e87c39;
+            border-radius: 50%;
+            opacity: 0;
+            animation: dot-drift 8s ease-in-out infinite;
+        }
+        .dots span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .dots span:nth-child(2) { top: 30%; left: 80%; animation-delay: 1.5s; }
+        .dots span:nth-child(3) { top: 60%; left: 25%; animation-delay: 3s; }
+        .dots span:nth-child(4) { top: 75%; left: 70%; animation-delay: 4.5s; }
+        .dots span:nth-child(5) { top: 45%; left: 50%; animation-delay: 2s; }
+        .dots span:nth-child(6) { top: 85%; left: 15%; animation-delay: 5s; }
+
+        @keyframes dot-drift {
+            0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+            50% { opacity: 0.6; transform: translateY(-20px) scale(1); }
+        }
+
+        .logo {
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            filter: drop-shadow(0 0 12px rgba(232,124,57,0.4));
+            z-index: 10;
+            animation: logo-fade 1s ease-out;
+        }
+        @keyframes logo-fade {
+            from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        .main-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: content-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+            padding: 40px 20px;
+        }
+        @keyframes content-in {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .status-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            display: inline-block;
+            animation: wrench-swing 2s ease-in-out infinite;
+        }
+        @keyframes wrench-swing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-12deg); }
+            75% { transform: rotate(12deg); }
+        }
+
+        .main-content h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #e87c39, #ff9f5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .main-content p {
+            font-size: 1.15rem;
+            color: #888;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .progress-wrap {
+            margin-top: 32px;
+            width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(232,124,57,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -40%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #e87c39, transparent);
+            animation: progress-slide 1.8s ease-in-out infinite;
+            border-radius: 4px;
+        }
+        @keyframes progress-slide {
+            from { left: -40%; }
+            to { left: 100%; }
+        }
+        .progress-label {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+
+        .socials {
+            margin-top: 40px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            animation: socials-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+        }
+        @keyframes socials-in {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            color: #aaa;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .socials a:hover {
+            background: rgba(232,124,57,0.1);
+            border-color: rgba(232,124,57,0.3);
+            color: #e87c39;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(232,124,57,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 { font-size: 1.9rem; }
+            .main-content p { font-size: 1rem; }
+            .logo { width: 120px; top: 30px; }
+            .status-icon { font-size: 3rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dots">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <img src="/img/logoserver.png" class="logo" alt="UKRAINE RP Logo">
+
+    <div class="main-content">
+
+        <h1>Технічні роботи</h1>
+        <p>Сайт тимчасово недоступний, Сайт оновлюєтся до нової версії. Детальніше про Оновлення у нашому телеграммі!</p>
+
+        <div class="progress-wrap">
+            <div class="progress-bar"></div>
+            <div class="progress-label">ОНОВЛЕННЯ В ПРОЦЕСІ</div>
+        </div>
+
+        <div class="socials">
+            <a href="https://t.me/ukrainerpeh" target="_blank" rel="noopener" title="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://discord.gg/ukrainerpeh" target="_blank" rel="noopener" title="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ukrainerpeh" target="_blank" rel="noopener" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
