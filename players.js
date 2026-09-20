@@ -89,7 +89,7 @@ const players = {
             "role": "Технічний Адміністратор",
             "telegram": "1431122546",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
+        }
     ],
     "СБС": [
         {
@@ -307,14 +307,7 @@ const players = {
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1290420954AF9DDF74699118861FCD63-Png/150/150/AvatarHeadshot/Png/noFilter"
         }
     ],
-    "МВС": [
-        {
-            "username": "3cy_77781046",
-            "role": "Міністр МВС",
-            "telegram": "t.me/ISKODAI",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-029BB1844A91E13AFFEB1875682EE9C7-Png/150/150/AvatarHeadshot/Png/noFilter"
-        }
-    ],
+    "МВС": [],
     "Прокуратура": [],
     "Інше": [
         {
@@ -328,6 +321,6 @@ const players = {
             "role": "Технічний Адміністратор",
             "telegram": "1431122546",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
+        }
     ]
 };
