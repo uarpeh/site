@@ -242,8 +242,8 @@
       const leaf = document.createElement('span');
       leaf.className = 'falling-leaf';
       leaf.style.left = `${Math.random() * 96}%`;
-      leaf.style.setProperty('--leaf-size', `${14 + Math.random() * 11}px`);
-      leaf.style.setProperty('--leaf-duration', `${6 + Math.random() * 4}s`); 
+      leaf.style.setProperty('--leaf-size', `${14 + Math.random() * 12}px`);
+      leaf.style.setProperty('--leaf-duration', `${6 + Math.random() * 6}s`); 
       leaf.style.setProperty('--leaf-drift-a', `${-45 + Math.random() * 90}px`);
       leaf.style.setProperty('--leaf-drift-b', `${-80 + Math.random() * 160}px`);
       layer.appendChild(leaf);
@@ -252,7 +252,7 @@
     };
 
     const schedule = () => {
-      const delay = 400 + Math.random() * 800; 
+      const delay = 800 + Math.random() * 800; 
       window.setTimeout(() => {
         spawnLeaf();
         if (Math.random() < 0.45) window.setTimeout(spawnLeaf, 200 + Math.random() * 400);
