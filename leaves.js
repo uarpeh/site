@@ -41,8 +41,9 @@
         width: var(--leaf-size);
         height: calc(var(--leaf-size) * .72);
         border-radius: 85% 0 85% 0;
-        background: linear-gradient(135deg, #ffe77a 0%, #f0c42f 58%, #c99510 100%);
-        box-shadow: inset -2px -2px 3px rgba(100,68,0,.18);
+        /* Змінено на помаранчевий градієнт */
+        background: linear-gradient(135deg, #ffb74d 0%, #f57c00 58%, #e65100 100%);
+        box-shadow: inset -2px -2px 3px rgba(100,30,0,.18);
         transform-origin: 50% 50%;
         user-select: none;
         will-change: transform, opacity;
@@ -58,7 +59,7 @@
         top: 12%;
         width: 1px;
         height: 82%;
-        background: rgba(128,88,0,.45);
+        background: rgba(128,40,0,.45);
         transform: rotate(-42deg);
         transform-origin: center;
       }
@@ -236,13 +237,13 @@
 
     const spawnLeaf = () => {
       if (document.hidden) return;
-      if (layer.childElementCount >= 7) return;
+      if (layer.childElementCount >= 20) return;
 
       const leaf = document.createElement('span');
       leaf.className = 'falling-leaf';
       leaf.style.left = `${Math.random() * 96}%`;
       leaf.style.setProperty('--leaf-size', `${14 + Math.random() * 11}px`);
-      leaf.style.setProperty('--leaf-duration', `${8 + Math.random() * 5}s`);
+      leaf.style.setProperty('--leaf-duration', `${6 + Math.random() * 4}s`); 
       leaf.style.setProperty('--leaf-drift-a', `${-45 + Math.random() * 90}px`);
       leaf.style.setProperty('--leaf-drift-b', `${-80 + Math.random() * 160}px`);
       layer.appendChild(leaf);
@@ -251,15 +252,15 @@
     };
 
     const schedule = () => {
-      const delay = 3800 + Math.random() * 4200;
+      const delay = 400 + Math.random() * 800; 
       window.setTimeout(() => {
         spawnLeaf();
-        if (Math.random() < 0.22) window.setTimeout(spawnLeaf, 650 + Math.random() * 900);
+        if (Math.random() < 0.45) window.setTimeout(spawnLeaf, 200 + Math.random() * 400);
         schedule();
       }, delay);
     };
 
-    window.setTimeout(spawnLeaf, 1200);
+    window.setTimeout(spawnLeaf, 500);
     schedule();
   }
 
