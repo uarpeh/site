@@ -83,7 +83,13 @@ const players = {
             "role": "R1c Адміністратор-Комунікатор",
             "telegram": "5456022682",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-CF6A1C9DB0505DBAAFDFA918F897C54A-Png/150/150/AvatarHeadshot/Png/noFilter"
-        }
+        },
+        {
+            "username": "Itz_raose",
+            "role": "Технічний Адміністратор",
+            "telegram": "1431122546",
+            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
+        },
     ],
     "СБС": [
         {
@@ -319,7 +325,7 @@ const players = {
         },
         {
             "username": "Itz_raose",
-            "role": "R3 Старший Адміністратор",
+            "role": "Технічний Адміністратор",
             "telegram": "1431122546",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
