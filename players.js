@@ -187,74 +187,7 @@ const players = {
             "avatar": ""
         }
     ],
-    "Мерія": [
-        {
-            "username": "777ivan07",
-            "role": "Заступник Мера",
-            "telegram": "t.me/leleleka_best",
-            "avatar": "https://i.postimg.cc/NMmjdVGf/photo-2026-06-24-15-54-03.jpg"
-        },
-        {
-            "username": "master_patata1",
-            "role": "Секретар",
-            "telegram": "t.me/hello_amqruko",
-            "avatar": "https://i.postimg.cc/8C40Xrbd/IMG-20260624-004700-310.jpg"
-        },
-        {
-            "username": "XxsSashaxxjj",
-            "role": "Радник",
-            "telegram": "t.me/XxsSashaxxjj",
-            "avatar": "https://i.postimg.cc/ry5Mgfrj/IMG-20260624-010747-809.jpg"
-        },
-        {
-            "username": "Anya_wuow35",
-            "role": "Радник",
-            "telegram": "t.me/Giko_0303",
-            "avatar": "https://i.postimg.cc/qqwGMFkd/IMG-20260624-223549-245.jpg"
-        },
-        {
-            "username": "roxbennis0",
-            "role": "Радник",
-            "telegram": "t.me/lauwerx007",
-            "avatar": "https://i.postimg.cc/RhxN9mpw/photo-2026-06-06-12-31-43.jpg"
-        },
-        {
-            "username": "Den45bgg",
-            "role": "Охоронець",
-            "telegram": "t.me/Hoslifx7pro6ka",
-            "avatar": "https://i.postimg.cc/Ls3cdWmK/IMG-20260624-004339-483.jpg"
-        },
-        {
-            "username": "34436euf",
-            "role": "Охоронець",
-            "telegram": "t.me/Artem75fgj",
-            "avatar": "https://i.postimg.cc/ydB7c98P/IMG-20260624-003930-118.jpg"
-        },
-        {
-            "username": "makspsava",
-            "role": "Охоронець",
-            "telegram": "t.me/RoksyxMaks",
-            "avatar": "https://i.postimg.cc/qRC2hPgC/IMG-20260624-003623-734.jpg"
-        },
-        {
-            "username": "val1n0tm",
-            "role": "Охоронець",
-            "telegram": "t.me/g0gocat",
-            "avatar": "https://i.postimg.cc/1zY5pBW7/photo-2026-06-29-18-25-26.jpg"
-        },
-        {
-            "username": "Mativiti_aaa",
-            "role": "Охоронець",
-            "telegram": "t.me/Matvei_Lego0_0",
-            "avatar": "https://i.postimg.cc/SxdKKkck/photo-2026-06-29-18-25-14.jpg"
-        },
-        {
-            "username": "Asda7771jog",
-            "role": "Охоронець",
-            "telegram": "t.me/burmalda1488676752",
-            "avatar": "https://i.postimg.cc/J4dPQdsD/photo-2026-06-24-15-55-30.jpg"
-        }
-    ],
+    "Мерія": [],
     "ДАРШ": [
         {
             "username": "XxsSashaxxjj",
