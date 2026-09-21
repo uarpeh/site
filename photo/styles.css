@@ -46,7 +46,6 @@ body{
     text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
-/* Однаковий відступ для всіх елементів списку */
 .event-date,
 .event-location,
 .contact-item {
@@ -73,10 +72,9 @@ body{
 .event-description{
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px; /* Ближче до кнопки */
+    margin-bottom: 15px;
 }
 
-/* Стилі для посилання Telegram з м'якшим, приємним кольором */
 .contact-item a {
     color: #33b1ff;
     text-decoration: none;
@@ -88,18 +86,27 @@ body{
     text-decoration: underline;
 }
 
-/* М'якший синій значок Telegram */
+/* Telegram іконка в кружечку */
 .telegram-icon {
-    font-size: 1.4rem;
-    color: #33b1ff;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #229ed9;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Значок у стилі Roblox */
+/* Нижня іконка (Roblox-стиль): біла і трохи менша */
 .roblox-icon {
-    font-size: 1.3rem;
-    color: #e21b22;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    font-size: 1.05rem; /* Зменшено розмір */
+    color: #ffffff;     /* Пофарбовано в білий колір */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+    width: 32px;        /* Для однакового вирівнювання з верхнім рядком */
+    text-align: center;
 }
 
 .back-button{
@@ -115,7 +122,7 @@ body{
     border-radius: 30px;
     font-weight: 600;
     border: 1px solid rgba(255,255,255,.2);
-    margin-top: 5px; /* Зроблено максимально близько до контактів */
+    margin-top: 5px;
 }
 
 .back-button:hover{
@@ -134,6 +141,6 @@ body{
     .event-title{font-size:1.8rem}
     .event-date, .event-location, .contact-item{font-size:.9rem}
     .back-button{padding:8px 18px;font-size:.9rem}
-    .telegram-icon { font-size: 1.2rem; }
-    .roblox-icon { font-size: 1.1rem; }
+    .telegram-icon { width: 28px; height: 28px; font-size: 0.85rem; }
+    .roblox-icon { font-size: 0.95rem; }
 }
