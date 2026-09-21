@@ -100,10 +100,11 @@ body{
 }
 
 .roblox-icon {
-    font-size: 1.2rem; /* Зменшено розмір */
-    color: #ffffff;     /* Пофарбовано в білий колір */
+    font-size: 0.95rem; 
+    color: #ffffff;   
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
-    width: 32px;        /* Для однакового вирівнювання з верхнім рядком */
+    width: 19,2px;
+    height: 19,2px
     text-align: center;
 }
 
