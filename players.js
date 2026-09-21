@@ -20,21 +20,15 @@ const players = {
         },
         {
             "username": "Andrushka_pupsik",
-            "role": "R4 Головний Адміністратор-Технічний Адміністратор",
+            "role": "R4 Головний Адміністратор | Технічний Адміністратор",
             "telegram": "5262299554",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-6BFE2CCC933544A43F2960DEB2B73826-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
             "username": "Andrew_01174",
-            "role": "R3 Старший Адміністратор",
+            "role": "R1 Адміністратор Патрульний | Технічний Адміністратор",
             "telegram": "8377880216",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-F3E80E05FD28B906F106F78AE3F59C4B-Png/420/420/AvatarHeadshot/Png/noFilter"
-        },
-        {
-            "username": "bodja150510",
-            "role": "R2a Головний Координатор Ролі",
-            "telegram": "1334371648",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4D0AF282EE478B71AE86F7B2697B2C82-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
             "username": "agency_roblox4",
@@ -49,40 +43,16 @@ const players = {
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-B2B00BD9F45C8E4FB5D999C3538BBA3A-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
-            "username": "eeeeyegeggegehux",
-            "role": "R1c Адміністратор-Комунікатор",
-            "telegram": "5599228299",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-86422F21357F24D529A8BF311E7C5C43-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
-            "username": "maksumkasymk789",
-            "role": "R1a Адміністратор-Патрульний",
-            "telegram": "8495519537",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-5628128C29B514F977AEA8215868BACB-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
             "username": "LowSkillEnder",
             "role": "R1a Адміністратор-Патрульний",
             "telegram": "637760273",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1C3FE0A661E4C51F26F60961A603EFDF-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
-            "username": "K_PoPlove9473",
-            "role": "R1a Адміністратор-Патрульний",
-            "telegram": "t.me/CHED4Y",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-A13468A25DB793631B06BDAE61D3EEEB-Png/150/150/AvatarHeadshot/Webp/noFilter"
-        },
-        {
             "username": "svyatosuk489",
             "role": "R1a Адміністратор-Патрульний",
             "telegram": "1567835732",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-AB24D78C55810DE8C8D00F170CC31CA8-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
-            "username": "Danfas4",
-            "role": "R1c Адміністратор-Комунікатор",
-            "telegram": "5456022682",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-CF6A1C9DB0505DBAAFDFA918F897C54A-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
             "username": "Itz_raose",
