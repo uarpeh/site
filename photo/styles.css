@@ -46,15 +46,14 @@ body{
     text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
-/* Збільшений розмір тексту для дати, локації та контактів */
 .event-date,
 .event-location,
 .contact-item {
-    font-size: 1.35rem; /* Збільшено */
+    font-size: 1.1rem;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
@@ -63,7 +62,7 @@ body{
 }
 
 .event-date i{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .event-location {
@@ -87,43 +86,41 @@ body{
     text-decoration: underline;
 }
 
-/* Telegram іконка (збільшена під новий розмір тексту) */
+/* Telegram іконка в кружечку */
 .telegram-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     background-color: #229ed9;
     color: #fff;
     border-radius: 50%;
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Нижня іконка: біла та пропорційно більша */
+/* Нижня іконка (Roblox-стиль): біла і трохи менша */
 .roblox-icon {
-    font-size: 1.3rem;
-    color: #ffffff;
+    font-size: 1.05rem; /* Зменшено розмір */
+    color: #ffffff;     /* Пофарбовано в білий колір */
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
-    width: 38px;
+    width: 32px;        /* Для однакового вирівнювання з верхнім рядком */
     text-align: center;
 }
 
-/* Збільшений текст та падінги кнопки */
 .back-button{
     display: inline-flex;
-    gap: 12px;
+    gap: 10px;
     color: #fff;
     text-decoration: none;
     transition: .3s;
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-    padding: 12px 26px;
-    border-radius: 35px;
+    padding: 10px 22px;
+    border-radius: 30px;
     font-weight: 600;
-    font-size: 1.15rem; /* Збільшено */
     border: 1px solid rgba(255,255,255,.2);
     margin-top: 5px;
 }
@@ -142,8 +139,8 @@ body{
 @media (max-width:768px){
     .event-content{padding:30px 20px 20px}
     .event-title{font-size:1.8rem}
-    .event-date, .event-location, .contact-item{font-size:1.05rem}
-    .back-button{padding:10px 20px;font-size:1rem}
-    .telegram-icon { width: 32px; height: 32px; font-size: 0.95rem; }
-    .roblox-icon { font-size: 1.1rem; width: 32px; }
+    .event-date, .event-location, .contact-item{font-size:.9rem}
+    .back-button{padding:8px 18px;font-size:.9rem}
+    .telegram-icon { width: 28px; height: 28px; font-size: 0.85rem; }
+    .roblox-icon { font-size: 0.95rem; }
 }
