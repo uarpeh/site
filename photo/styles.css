@@ -86,13 +86,12 @@ body{
     text-decoration: underline;
 }
 
-/* Telegram іконка в кружечку */
 .telegram-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 19,2px;
+    height: 19,2px;
     background-color: #229ed9;
     color: #fff;
     border-radius: 50%;
@@ -100,9 +99,8 @@ body{
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Нижня іконка (Roblox-стиль): біла і трохи менша */
 .roblox-icon {
-    font-size: 1.05rem; /* Зменшено розмір */
+    font-size: 1.2rem; /* Зменшено розмір */
     color: #ffffff;     /* Пофарбовано в білий колір */
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
     width: 32px;        /* Для однакового вирівнювання з верхнім рядком */
