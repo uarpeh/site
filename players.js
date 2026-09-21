@@ -8,7 +8,7 @@ const players = {
         },
         {
             "username": "Bandera909",
-            "role": "R6 Хуй Сервера",
+            "role": "R6 Власник Сервера",
             "telegram": "8556123935",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-52E8D0AEDF9EBFC016ABC09EAEDCA17D-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
