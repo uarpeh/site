@@ -13,7 +13,6 @@ body{
     overflow:hidden;
 }
 
-/* Затемнення повністю прибрано */
 .image-overlay{
     display: none;
 }
@@ -30,9 +29,8 @@ body{
     bottom:0;
     left:0;
     right:0;
-    /* Видалено темний градієнт фон під контентом, залишено лише плавне підняття блоку */
     background: transparent; 
-    padding:60px 40px 40px;
+    padding:40px 40px 30px;
     animation:.8s slideUp;
 }
 
@@ -44,111 +42,98 @@ body{
 .event-title{
     font-size:3rem;
     font-weight:700;
-    margin-bottom:20px;
+    margin-bottom:15px;
     text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
-.event-date{
-    font-size:1.2rem;
-    margin-bottom:15px;
-    color:gold;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-.event-date i{
-    font-size:1.3rem;
-}
-
-.event-location{
-    font-size:1.1rem;
-    margin-bottom:20px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    opacity:.95;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-.event-description{
-    font-size:1.1rem;
-    line-height:1.6;
-    max-width:800px;
-    margin-bottom:30px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Стилі для рядків контактів з іконками */
+/* Однаковий відступ для всіх елементів списку */
+.event-date,
+.event-location,
 .contact-item {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
+.event-date {
+    color: gold;
+}
+
+.event-date i{
+    font-size: 1.2rem;
+}
+
+.event-location {
+    opacity: .95;
+}
+
+.event-description{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Ближче до кнопки */
+}
+
+/* Стилі для посилання Telegram з м'якшим, приємним кольором */
 .contact-item a {
-    color: #fff;
+    color: #33b1ff;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .contact-item a:hover {
-    color: #0088cc;
+    color: #75d1ff;
+    text-decoration: underline;
 }
 
-/* Великий синій значок Telegram */
+/* М'якший синій значок Telegram */
 .telegram-icon {
-    font-size: 1.6rem;
-    color: #0088cc;
+    font-size: 1.4rem;
+    color: #33b1ff;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
-/* Значок у стилі Roblox (аватарка/персонаж) */
+/* Значок у стилі Roblox */
 .roblox-icon {
-    font-size: 1.5rem;
-    color: #e21b22; /* Червонувато-помаранчевий стиль логотипу/активності Roblox */
+    font-size: 1.3rem;
+    color: #e21b22;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-}
-
-.back-button,.register-button{
-    display:inline-flex;
-    gap:10px;
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
 }
 
 .back-button{
-    align-items:center;
-    background:rgba(0, 0, 0, 0.4);
-    backdrop-filter:blur(10px);
-    padding:12px 24px;
-    border-radius:30px;
-    font-weight:600;
-    border:1px solid rgba(255,255,255,.2);
-    margin-top:20px;
+    display: inline-flex;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,.2);
+    margin-top: 5px; /* Зроблено максимально близько до контактів */
 }
 
 .back-button:hover{
-    background:rgba(0, 0, 0, 0.6);
-    transform:translateX(-5px);
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateX(-5px);
 }
 
 .buttons-container{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 @media (max-width:768px){
-    .event-content{padding:40px 20px 30px}
+    .event-content{padding:30px 20px 20px}
     .event-title{font-size:1.8rem}
-    .event-date,.event-description,.event-location{font-size:.9rem}
-    .back-button{padding:10px 20px;font-size:.9rem}
-    .telegram-icon { font-size: 1.3rem; }
-    .roblox-icon { font-size: 1.2rem; }
+    .event-date, .event-location, .contact-item{font-size:.9rem}
+    .back-button{padding:8px 18px;font-size:.9rem}
+    .telegram-icon { font-size: 1.2rem; }
+    .roblox-icon { font-size: 1.1rem; }
 }
