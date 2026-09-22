@@ -52,13 +52,13 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.735)),
-    url("/img/фон.webp") center/cover no-repeat;
+    url("/img/фон.jpg") center/cover no-repeat;
   overflow-y: scroll;
 }
 body::before {
   background:
     linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.559)),
-    url("/img/фон.webp") center/cover no-repeat;
+    url("/img/фон.jpg") center/cover no-repeat;
   z-index: -2;
 }
 body::after {
