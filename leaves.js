@@ -6,10 +6,10 @@
   const PLACEHOLDER = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"%3E%3Crect width="150" height="150" rx="75" fill="%23424242"/%3E%3Ccircle cx="75" cy="58" r="26" fill="%23707070"/%3E%3Cpath d="M31 132c5-29 22-43 44-43s39 14 44 43" fill="%23707070"/%3E%3C/svg%3E';
 
   function injectStyles() {
-    if (document.getElementById('avatar-confetti-styles')) return;
+    if (document.getElementById('avatar-leaves-styles')) return;
 
     const style = document.createElement('style');
-    style.id = 'avatar-confetti-styles';
+    style.id = 'avatar-leaves-styles';
     style.textContent = `
       .pv-roblox-avatar-wrap {
         display: flex;
@@ -27,7 +27,7 @@
         box-shadow: 0 8px 24px rgba(0,0,0,.22);
       }
 
-      .confetti-layer {
+      .falling-leaf-layer {
         position: fixed;
         inset: 0;
         overflow: hidden;
@@ -35,23 +35,30 @@
         z-index: 1490;
       }
 
-      .confetti {
+      .falling-leaf {
         position: absolute;
         top: -30px;
-        background: var(--c-color);
+        width: var(--leaf-size);
+        height: var(--leaf-size); /* Робимо висоту рівною ширині для квадрата */
+        background: var(--leaf-color); /* Використовуємо змінну для кольору */
         transform-origin: center;
         user-select: none;
-        will-change: transform;
-        animation: confetti-fall var(--c-duration) linear forwards;
+        will-change: transform, opacity;
+        animation: leaf-fall var(--leaf-duration) linear forwards;
         box-shadow: 0 2px 4px rgba(0,0,0,.15);
+        opacity: 0;
       }
 
-      @keyframes confetti-fall {
+      @keyframes leaf-fall {
         0% {
           transform: translate3d(0, -50px, 0) rotate(0deg);
+          opacity: 0;
         }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
         100% {
-          transform: translate3d(var(--c-drift), 108vh, 0) rotate(var(--c-rotation));
+          transform: translate3d(var(--leaf-drift), 108vh, 0) rotate(var(--leaf-rotation));
+          opacity: 0;
         }
       }
 
@@ -64,7 +71,7 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .confetti-layer { display: none !important; }
+        .falling-leaf-layer { display: none !important; }
       }
     `;
     document.head.appendChild(style);
@@ -201,58 +208,53 @@
     observer.observe(rolesContainer, { childList: true, subtree: true });
   }
 
-  function installConfetti() {
+  function installLeaves() {
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-    if (document.querySelector('.confetti-layer')) return;
+    if (document.querySelector('.falling-leaf-layer')) return;
 
     const layer = document.createElement('div');
-    layer.className = 'confetti-layer';
+    layer.className = 'falling-leaf-layer';
     layer.setAttribute('aria-hidden', 'true');
     document.body.appendChild(layer);
 
-    // Палитра ярких цветов для конфетти
+    // Палітра кольорів для конфетті
     const colors = ['#fce18a', '#ff726d', '#b48def', '#f4306d', '#3f51b5', '#4caf50', '#ff9800', '#00bcd4'];
 
-    const spawnConfetti = () => {
+    const spawnLeaf = () => {
       if (document.hidden) return;
-      if (layer.childElementCount >= 50) return; // Увеличили плотность, так как конфетти меньше листьев
+      if (layer.childElementCount >= 50) return; // Збільшена кількість, бо конфетті дрібніше
 
-      const confetti = document.createElement('span');
-      confetti.className = 'confetti';
-      confetti.style.left = `${Math.random() * 96}%`;
+      const leaf = document.createElement('span');
+      leaf.className = 'falling-leaf'; // Назва класу залишається оригінальною
+      leaf.style.left = `${Math.random() * 96}%`;
       
-      // Рандомизация размера (квадратики от 6px до 14px)
-      const size = 6 + Math.random() * 8;
-      confetti.style.width = `${size}px`;
-      confetti.style.height = `${size}px`;
+      const size = 6 + Math.random() * 8; // Розмір від 6px до 14px
+      leaf.style.setProperty('--leaf-size', `${size}px`);
+      leaf.style.setProperty('--leaf-color', colors[Math.floor(Math.random() * colors.length)]);
+      leaf.style.setProperty('--leaf-duration', `${4 + Math.random() * 3}s`); 
+      leaf.style.setProperty('--leaf-drift', `${-100 + Math.random() * 200}px`);
+      leaf.style.setProperty('--leaf-rotation', `${360 + Math.random() * 1080}deg`);
       
-      // Случайный цвет, скорость падения, смещение в сторону и количество оборотов
-      confetti.style.setProperty('--c-color', colors[Math.floor(Math.random() * colors.length)]);
-      confetti.style.setProperty('--c-duration', `${4 + Math.random() * 3}s`); 
-      confetti.style.setProperty('--c-drift', `${-100 + Math.random() * 200}px`);
-      confetti.style.setProperty('--c-rotation', `${360 + Math.random() * 1080}deg`);
-      
-      layer.appendChild(confetti);
+      layer.appendChild(leaf);
 
-      confetti.addEventListener('animationend', () => confetti.remove(), { once: true });
+      leaf.addEventListener('animationend', () => leaf.remove(), { once: true });
     };
 
     const schedule = () => {
-      const delay = 200 + Math.random() * 400; // Частота генерации частиц
+      const delay = 200 + Math.random() * 400; // Частота генерації
       window.setTimeout(() => {
-        spawnConfetti();
-        // Шанс выбросить еще одну частицу почти сразу для эффекта "взрыва"
-        if (Math.random() < 0.6) window.setTimeout(spawnConfetti, 50 + Math.random() * 150);
+        spawnLeaf();
+        if (Math.random() < 0.6) window.setTimeout(spawnLeaf, 50 + Math.random() * 150);
         schedule();
       }, delay);
     };
 
-    window.setTimeout(spawnConfetti, 500);
+    window.setTimeout(spawnLeaf, 500);
     schedule();
   }
 
   injectStyles();
   installAvatarHook();
   installRoleAvatarHook();
-  installConfetti(); // Вызываем новую функцию вместо installLeaves
+  installLeaves(); // Назва функції залишається оригінальною
 })();
