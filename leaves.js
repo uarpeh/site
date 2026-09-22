@@ -6,10 +6,10 @@
   const PLACEHOLDER = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"%3E%3Crect width="150" height="150" rx="75" fill="%23424242"/%3E%3Ccircle cx="75" cy="58" r="26" fill="%23707070"/%3E%3Cpath d="M31 132c5-29 22-43 44-43s39 14 44 43" fill="%23707070"/%3E%3C/svg%3E';
 
   function injectStyles() {
-    if (document.getElementById('avatar-leaves-styles')) return;
+    if (document.getElementById('avatar-confetti-styles')) return;
 
     const style = document.createElement('style');
-    style.id = 'avatar-leaves-styles';
+    style.id = 'avatar-confetti-styles';
     style.textContent = `
       .pv-roblox-avatar-wrap {
         display: flex;
@@ -27,7 +27,7 @@
         box-shadow: 0 8px 24px rgba(0,0,0,.22);
       }
 
-      .falling-leaf-layer {
+      .confetti-layer {
         position: fixed;
         inset: 0;
         overflow: hidden;
@@ -35,48 +35,23 @@
         z-index: 1490;
       }
 
-      .falling-leaf {
+      .confetti {
         position: absolute;
-        top: -48px;
-        width: var(--leaf-size);
-        height: calc(var(--leaf-size) * .72);
-        border-radius: 85% 0 85% 0;
-        /* Змінено на помаранчевий градієнт */
-        background: linear-gradient(135deg, #ffb74d 0%, #f57c00 58%, #e65100 100%);
-        box-shadow: inset -2px -2px 3px rgba(100,30,0,.18);
-        transform-origin: 50% 50%;
-        user-select: none;
-        will-change: transform, opacity;
-        animation: leaf-fall var(--leaf-duration) linear forwards;
-        opacity: 0;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,.18));
-      }
-
-      .falling-leaf::after {
-        content: '';
-        position: absolute;
-        left: 48%;
-        top: 12%;
-        width: 1px;
-        height: 82%;
-        background: rgba(128,40,0,.45);
-        transform: rotate(-42deg);
+        top: -30px;
+        background: var(--c-color);
         transform-origin: center;
+        user-select: none;
+        will-change: transform;
+        animation: confetti-fall var(--c-duration) linear forwards;
+        box-shadow: 0 2px 4px rgba(0,0,0,.15);
       }
 
-      @keyframes leaf-fall {
+      @keyframes confetti-fall {
         0% {
           transform: translate3d(0, -50px, 0) rotate(0deg);
-          opacity: 0;
         }
-        8% { opacity: .86; }
-        45% {
-          transform: translate3d(var(--leaf-drift-a), 48vh, 0) rotate(210deg);
-        }
-        92% { opacity: .8; }
         100% {
-          transform: translate3d(var(--leaf-drift-b), 108vh, 0) rotate(470deg);
-          opacity: 0;
+          transform: translate3d(var(--c-drift), 108vh, 0) rotate(var(--c-rotation));
         }
       }
 
@@ -89,7 +64,7 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .falling-leaf-layer { display: none !important; }
+        .confetti-layer { display: none !important; }
       }
     `;
     document.head.appendChild(style);
@@ -226,46 +201,58 @@
     observer.observe(rolesContainer, { childList: true, subtree: true });
   }
 
-  function installLeaves() {
+  function installConfetti() {
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-    if (document.querySelector('.falling-leaf-layer')) return;
+    if (document.querySelector('.confetti-layer')) return;
 
     const layer = document.createElement('div');
-    layer.className = 'falling-leaf-layer';
+    layer.className = 'confetti-layer';
     layer.setAttribute('aria-hidden', 'true');
     document.body.appendChild(layer);
 
-    const spawnLeaf = () => {
+    // Палитра ярких цветов для конфетти
+    const colors = ['#fce18a', '#ff726d', '#b48def', '#f4306d', '#3f51b5', '#4caf50', '#ff9800', '#00bcd4'];
+
+    const spawnConfetti = () => {
       if (document.hidden) return;
-      if (layer.childElementCount >= 20) return;
+      if (layer.childElementCount >= 50) return; // Увеличили плотность, так как конфетти меньше листьев
 
-      const leaf = document.createElement('span');
-      leaf.className = 'falling-leaf';
-      leaf.style.left = `${Math.random() * 96}%`;
-      leaf.style.setProperty('--leaf-size', `${14 + Math.random() * 12}px`);
-      leaf.style.setProperty('--leaf-duration', `${6 + Math.random() * 6}s`); 
-      leaf.style.setProperty('--leaf-drift-a', `${-45 + Math.random() * 90}px`);
-      leaf.style.setProperty('--leaf-drift-b', `${-80 + Math.random() * 160}px`);
-      layer.appendChild(leaf);
+      const confetti = document.createElement('span');
+      confetti.className = 'confetti';
+      confetti.style.left = `${Math.random() * 96}%`;
+      
+      // Рандомизация размера (квадратики от 6px до 14px)
+      const size = 6 + Math.random() * 8;
+      confetti.style.width = `${size}px`;
+      confetti.style.height = `${size}px`;
+      
+      // Случайный цвет, скорость падения, смещение в сторону и количество оборотов
+      confetti.style.setProperty('--c-color', colors[Math.floor(Math.random() * colors.length)]);
+      confetti.style.setProperty('--c-duration', `${4 + Math.random() * 3}s`); 
+      confetti.style.setProperty('--c-drift', `${-100 + Math.random() * 200}px`);
+      confetti.style.setProperty('--c-rotation', `${360 + Math.random() * 1080}deg`);
+      
+      layer.appendChild(confetti);
 
-      leaf.addEventListener('animationend', () => leaf.remove(), { once: true });
+      confetti.addEventListener('animationend', () => confetti.remove(), { once: true });
     };
 
     const schedule = () => {
-      const delay = 800 + Math.random() * 800; 
+      const delay = 200 + Math.random() * 400; // Частота генерации частиц
       window.setTimeout(() => {
-        spawnLeaf();
-        if (Math.random() < 0.45) window.setTimeout(spawnLeaf, 200 + Math.random() * 400);
+        spawnConfetti();
+        // Шанс выбросить еще одну частицу почти сразу для эффекта "взрыва"
+        if (Math.random() < 0.6) window.setTimeout(spawnConfetti, 50 + Math.random() * 150);
         schedule();
       }, delay);
     };
 
-    window.setTimeout(spawnLeaf, 500);
+    window.setTimeout(spawnConfetti, 500);
     schedule();
   }
 
   injectStyles();
   installAvatarHook();
   installRoleAvatarHook();
-  installLeaves();
+  installConfetti(); // Вызываем новую функцию вместо installLeaves
 })();
