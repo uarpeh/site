@@ -52,13 +52,13 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.735)),
-    url("/img/фон.jpg") center/cover no-repeat;
+    url("/img/фон.webp") center/cover no-repeat;
   overflow-y: scroll;
 }
 body::before {
   background:
     linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.559)),
-    url("/img/фон.jpg") center/cover no-repeat;
+    url("/img/фон.webp") center/cover no-repeat;
   z-index: -2;
 }
 body::after {
@@ -3593,6 +3593,82 @@ div[data-id="rule-4"] li {
 }
 #rule-scrollbar-thumb:active {
   cursor: grabbing;
+}
+
+/* Player directory: compact identity cards with an accessible detail sheet. */
+.role-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.role-profile-button:focus-visible,
+.player-profile-dialog a:focus-visible,
+.player-profile-close:focus-visible { outline: 3px solid #ffc28b; outline-offset: 4px; }
+.role-profile-button .role-info { display: grid; gap: 3px; min-width: 0; }
+.role-username { font-size: .95rem; overflow-wrap: anywhere; }
+.role-open-hint { color: #ffd0aa; font-size: .78rem; }
+.player-profile-dialog {
+  width: min(520px, calc(100% - 28px));
+  max-height: min(720px, calc(100dvh - 36px));
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 211, 175, .32);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(91, 73, 62, .72), rgba(31, 27, 26, .81) 58%, rgba(43, 32, 28, .82));
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  box-shadow: 0 30px 100px #0009, inset 0 1px #ffffff55, inset 0 0 42px #ffe0c012;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  backdrop-filter: blur(30px) saturate(165%);
+  -webkit-backdrop-filter: blur(30px) saturate(165%);
+}
+.player-profile-dialog::backdrop { background: #090706af; backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.player-profile-close { position: absolute; top: 12px; right: 16px; background: transparent; border: 0; color: #fff; font-size: 32px; cursor: pointer; }
+.player-profile-header { display: flex; align-items: center; gap: 18px; padding-right: 20px; }
+.player-profile-header img { width: 92px; height: 92px; border-radius: 20px; object-fit: cover; background: #45352c; border: 1px solid #ffffff26; }
+.player-profile-header h2 { margin: 0; font-size: clamp(1.2rem, 5vw, 1.8rem); text-align: left; overflow-wrap: anywhere; }
+.player-profile-header p { margin: 6px 0 0; color: #d6beb0; line-height: 1.4; }
+.player-profile-dialog h3 { margin: 28px 0 12px; }
+.player-profile-links, .player-license-list { display: grid; gap: 9px; margin-top: 22px; }
+.player-profile-links a, .player-license-list a { display: block; padding: 13px 15px; border: 1px solid #ffffff38; border-radius: 12px; background: linear-gradient(120deg, #ffffff25, #ffffff0c); color: #fff; text-decoration: none; font-weight: 600; box-shadow: inset 0 1px #ffffff24; }
+.player-profile-links a:first-child { background: #e87c39; color: #1b100a; border-color: #e87c39; }
+.player-license-list p, .player-homes-empty { color: #cdbdb4; line-height: 1.5; }
+.player-home-row { margin: 12px 0; overflow: hidden; border-radius: 14px; border: 1px solid #ffffff38; background: #ffffff16; box-shadow: inset 0 1px #ffffff1c; }
+.player-home-row img { display: block; width: 100%; max-height: 210px; object-fit: cover; }
+.player-home-row p { margin: 0; padding: 12px 14px; color: #fff; font-weight: 600; }
+.player-avatar-switch { display: inline-flex; gap: 3px; margin-top: 25px; padding: 4px; border: 1px solid #ffffff32; border-radius: 100px; background: #ffffff13; }
+.player-avatar-switch button { min-width: 64px; min-height: 38px; border: 0; border-radius: 100px; background: transparent; color: #e7d8d1; font: 700 .85rem Montserrat, sans-serif; cursor: pointer; touch-action: manipulation; }
+.player-avatar-switch button.active { background: #e87c39; color: #21150d; box-shadow: 0 2px 10px #0004; }
+.player-avatar-stage { display: grid; place-items: center; min-height: 250px; margin-top: 12px; padding: 12px; border: 1px solid #ffffff20; border-radius: 18px; background: radial-gradient(circle at 50% 35%, #4b403d 0, #241f1f 65%); text-align: center; }
+.player-avatar-stage img, .player-avatar-stage model-viewer { display: block; width: 100%; height: 250px; object-fit: contain; }
+.player-avatar-stage[data-mode="3d"] { background: radial-gradient(circle at 50% 38%, #655950 0, #3d332e 48%, #251f1e 100%); }
+.player-avatar-stage canvas { display: block; width: 100% !important; height: 280px !important; border-radius: 12px; touch-action: pan-y; }
+.player-avatar-stage p { max-width: 26ch; margin: 0 auto; color: #dcc8bc; line-height: 1.5; }
+.player-avatar-stage a { color: #ffb47e; font-weight: 700; }
+.player-avatar-switch button:focus-visible { outline: 3px solid #ffc28b; outline-offset: 2px; }
+@media (max-width: 768px), (pointer: coarse) {
+  html { scroll-behavior: auto; -webkit-tap-highlight-color: transparent; }
+  #ruleModal { -webkit-overflow-scrolling: touch; overscroll-behavior: contain; touch-action: pan-y; }
+  #rule-scrollbar { display: none !important; }
+  .role:hover { transform: none; box-shadow: none; }
+  .role:hover .avatar { transform: none; }
+  .role-profile-button:active { opacity: .75; }
+  .role-profile-button { min-height: 72px; gap: 14px; }
+  .player-profile-dialog { padding: 24px 18px; }
+  .player-profile-header img { width: 72px; height: 72px; }
+  .player-profile-links a, .player-license-list a { min-height: 44px; box-sizing: border-box; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roles, .role { animation: none !important; transition: none !important; }
 }
 #rule-context-menu {
   position: fixed;
