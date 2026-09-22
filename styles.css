@@ -52,13 +52,13 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.735)),
-    url("/img/фон.jpg") center/cover no-repeat;
+    url("/img/фон.webp") center/cover no-repeat;
   overflow-y: scroll;
 }
 body::before {
   background:
     linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.559)),
-    url("/img/фон.jpg") center/cover no-repeat;
+    url("/img/фон.webp") center/cover no-repeat;
   z-index: -2;
 }
 body::after {
@@ -3612,9 +3612,16 @@ div[data-id="rule-4"] li {
 .role-profile-button:focus-visible,
 .player-profile-dialog a:focus-visible,
 .player-profile-close:focus-visible { outline: 3px solid #ffc28b; outline-offset: 4px; }
-.role-profile-button .role-info { display: grid; gap: 3px; min-width: 0; }
-.role-username { font-size: .95rem; overflow-wrap: anywhere; }
-.role-open-hint { color: #ffd0aa; font-size: .78rem; }
+.role-card { cursor: pointer; }
+.role-card .role-info { display: grid; min-width: 0; }
+.role-card .role-profile-button {
+  display: grid;
+  gap: 0;
+  min-height: 0;
+  font: inherit;
+  line-height: inherit;
+}
+.role-username, .role-telegram { font-size: inherit; overflow-wrap: anywhere; }
 .player-profile-dialog {
   width: min(520px, calc(100% - 28px));
   max-height: min(720px, calc(100dvh - 36px));
