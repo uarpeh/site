@@ -63,12 +63,6 @@ const players = {
     ],
     "СБС": [
         {
-            "username": "artemMelnichenko2013",
-            "role": "Директор СБС",
-            "telegram": "@hosters_full",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-13E4605FBEE2ECEF3B789D4CCEDF19A9-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
             "username": "DariySmertnk",
             "role": "Заступник Директора СБС",
             "telegram": "t.me/dariysmertnk",
