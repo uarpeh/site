@@ -75,11 +75,6 @@ const players = {
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-B2F70ED77E65AADE277244A5D336D1DC-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
-            "username": "YTNEON_2",
-            "role": "Працівник СБС",
-            "telegram": "@userh1pek"
-        },
-        {
             "username": "jofer_hob",
             "telegram": "6840451973",
             "role": "Працівник СБС | Керівник ЦСО-А"
