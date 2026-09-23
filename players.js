@@ -82,7 +82,7 @@ const players = {
         },
         {
             "username": "danil_aboltus",
-            "role": "Рядовий",
+            "role": "Працівник • Рядовий",
             "telegram": "@grozaua3",
             "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-E4A27629F2B53CC82DBE69A5440AC2F0-Png/420/420/Avatar/Png/noFilter"
         },
