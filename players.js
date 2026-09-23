@@ -79,11 +79,6 @@ const players = {
             "role": "Працівник СБС",
             "telegram": "@KatanaPurple",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4B905B104F13CA21CBE595CB694DBAB5-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
-            "username": "Mykhailo_Zaya1",
-            "telegram": "@void_21m",
-            "role": "Працівник СБС"
         }
     ],
     "ДБР": [
