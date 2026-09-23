@@ -85,6 +85,12 @@ const players = {
             "role": "Працівник СБС",
             "telegram": "@grozaua3",
             "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-E4A27629F2B53CC82DBE69A5440AC2F0-Png/420/420/Avatar/Png/noFilter"
+        },
+        {
+            "username": "Pushka2030",
+            "role": "Працівник СБС",
+            "telegram": "@BuddyyyXD",
+            "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-83B327F0A6F1F7504BB26F0C0F23BF81-Png/420/420/Avatar/Png/noFilter"
         }
     ],
     "ДБР": [
