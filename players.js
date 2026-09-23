@@ -76,7 +76,7 @@ const players = {
         },
         {
             "username": "sasha_me68",
-            "role": "Працівник СБС • молодший сержант",
+            "role": "Працівник • молодший сержант",
             "telegram": "@KatanaPurple",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4B905B104F13CA21CBE595CB694DBAB5-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
