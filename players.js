@@ -64,7 +64,7 @@ const players = {
     "СБС": [
         {
             "username": "DariySmertnk",
-            "role": "Заступник Директора СБС",
+            "role": "Директор СБС",
             "telegram": "t.me/dariysmertnk",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-A7DD1261E43F9172BA9573C922E0C5F9-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
