@@ -88,7 +88,7 @@ const players = {
         },
         {
             "username": "Pushka2030",
-            "role": "Працівник СБС",
+            "role": "Працівник • рядовий",
             "telegram": "@BuddyyyXD",
             "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-83B327F0A6F1F7504BB26F0C0F23BF81-Png/420/420/Avatar/Png/noFilter"
         }
