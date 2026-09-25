@@ -6,7 +6,7 @@ window.licenses = {
 
     // D
     "DariySmertnk": {"status":"Дійсна","expiry":"30.08.2026","telegram":"7889063904","username":"DariySmertnk"},
-    "DoggyGames_TV24": {"status":"Дійсна","expiry":"24.09.2026","telegram":"t.me/Doggy_Arrrr","username":"DoggyGames_TV24"},
+    "DoggyGames_TV24": {"status":"Дійсна","expiry":"24.09.2027","telegram":"t.me/Doggy_Arrrr","username":"DoggyGames_TV24"},
 
     // E
     "eldor830": {"username":"eldor830","status":"дійсна","expiry":"15.09.2026","telegram":"@eldusia"},
