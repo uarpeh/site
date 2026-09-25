@@ -50,7 +50,7 @@ const players = {
         },
         {
             "username": "Itz_raose",
-            "role": "Технічний Адміністратор",
+            "role": "Технічний Адміністратор.",
             "telegram": "1431122546",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-79FC02DDBDB3C3CBC41387AE4B651AF3-Png/150/150/AvatarHeadshot/Png/noFilter"
         }
