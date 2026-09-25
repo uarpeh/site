@@ -155,12 +155,6 @@ const players = {
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4D74895EEC1F4CA85C925E04EBA61D55-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
-            "username": "svervanchik",
-            "role": "Суддя",
-            "telegram": "t.me/Svervanchik",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-CECBEFBF4E588D2B31D9B2FE78F80C13-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
             "username": "Huhaidjopy",
             "role": "Суддя",
             "telegram": "671500607",
