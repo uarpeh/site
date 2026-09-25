@@ -16,7 +16,7 @@ window.licenses = {
     "mativiti_aaa": {"status":"Дійсна","expiry":"24.08.2026","telegram":"t.me/Matvei_Lego0_0"},
 
     // P
-    "Po_po171": {"status":"Дійсна","expiry":"02.09.2026","telegram":"6221089320","username":"Po_po171"},
+    "Po_po171": {"status":"Дійсна","expiry":"02.09.2027","telegram":"6221089320","username":"Po_po171"},
 
     // R
     "ROSTIKTHS": {"username":"ROSTIKTHS","status":"Дійсна","expiry":"02.09.2027","telegram":"@Mister_Pumasik"},
