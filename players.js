@@ -147,12 +147,6 @@ const players = {
             "role": "Головний Суддя",
             "telegram": "t.me/Samyry228",
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-E913BC846B4C63706C0E103F604EB4D9-Png/150/150/AvatarHeadshot/Webp/noFilter"
-        },
-        {
-            "username": "mummu228kuku",
-            "role": "Заступник Головного Судді",
-            "telegram": "t.me/here_everyone",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4D74895EEC1F4CA85C925E04EBA61D55-Png/150/150/AvatarHeadshot/Png/noFilter"
         }
     ],
     "Мерія": [],
