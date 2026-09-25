@@ -121,11 +121,6 @@ const players = {
             "telegram": "@feqohe"
         },
         {
-            "username": "AloshaWolf_1",
-            "role": "Капрал",
-            "telegram": "@didinsylt"
-        },
-        {
             "username": "Gmmmf1224",
             "role": "Капрал",
             "telegram": "@Myra1274"
