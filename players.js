@@ -91,6 +91,12 @@ const players = {
             "role": "Працівник • рядовий",
             "telegram": "@BuddyyyXD",
             "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-83B327F0A6F1F7504BB26F0C0F23BF81-Png/420/420/Avatar/Png/noFilter"
+        },
+        {
+            "username": "kolopohv",
+            "role": "Працівник • рядовий",
+            "telegram": "@KairoGlol",
+            "avatar": "https://tr.rbxcdn.com/30DAY-Avatar-8AE1A8DE9917A22218945BAB20CFEB7A-Png/420/420/Avatar/Png/noFilter"
         }
     ],
     "ДБР": [
