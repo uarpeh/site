@@ -49,12 +49,6 @@ const players = {
             "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1C3FE0A661E4C51F26F60961A603EFDF-Png/150/150/AvatarHeadshot/Png/noFilter"
         },
         {
-            "username": "svyatosuk489",
-            "role": "R1a Адміністратор-Патрульний",
-            "telegram": "1567835732",
-            "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-AB24D78C55810DE8C8D00F170CC31CA8-Png/150/150/AvatarHeadshot/Png/noFilter"
-        },
-        {
             "username": "Itz_raose",
             "role": "Технічний Адміністратор",
             "telegram": "1431122546",
